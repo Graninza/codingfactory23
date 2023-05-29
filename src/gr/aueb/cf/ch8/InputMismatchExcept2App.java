@@ -1,0 +1,33 @@
+package gr.aueb.cf.ch8;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class InputMismatchExcept2App {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int inputnum;
+        final int MAGIC_NUM = 12;
+
+        while (true){
+                System.out.println("Please insert a num");
+                if (in.hasNextInt()) {
+                    inputnum = in.nextInt();
+                }else {
+                    in.nextLine();
+                    System.out.println("Error. Please insert an int");
+                    continue;
+                }
+
+                if (inputnum == MAGIC_NUM){
+                    System.out.println("Great!");
+                    break;
+                }
+
+        }
+
+        System.out.println("Thanks for using the Magic App");
+
+    }
+}
